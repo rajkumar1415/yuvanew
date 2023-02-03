@@ -1,0 +1,15 @@
+#%RAML 1.0
+title: realtime
+protocols: [http,https]
+mediaType:     
+- application/json
+/work:
+  post:
+    body:
+       type: !include data type/1-dataType.raml
+       example: !include example/request file.json
+    responses:
+      200:
+        body:
+            example: !include example/responcefile.json 
+             
